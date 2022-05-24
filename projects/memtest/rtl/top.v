@@ -57,8 +57,11 @@ module top (
 `endif
 
 	// Clock (12M)
-	input  wire clk_in
+	input  wire clk_in,
+	output wire uart_gnd
 );
+
+    assign uart_gnd = 0;
 
 	// Target UART baudrate
 	localparam integer BAUDRATE = 2000000;

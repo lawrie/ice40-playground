@@ -1,0 +1,9 @@
+# Clock
+set_io --warn-no-port clk_in B7
+
+# UART
+set_io --warn-no-port uart_rx F10
+set_io --warn-no-port uart_tx F9
+
+set_io --warn-no-port uart_gnd G11
+

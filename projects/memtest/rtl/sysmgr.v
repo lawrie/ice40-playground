@@ -101,11 +101,11 @@ module sysmgr (
 	// HyperRAM - Sync signals
 `ifdef MEM_hyperram
 	ice40_serdes_sync #(
-		.PHASE      (2),
+		.PHASE      (3),
 		.NEG_EDGE   (0),
 		.GLOBAL_BUF (0),
-		.LOCAL_BUF  (1),
-		.BEL_COL    ("X12"),
+		.LOCAL_BUF  (0),
+		.BEL_COL    ("X6"),
 		.BEL_ROW    ("Y15")
 	) sync_4x_I (
 		.clk_slow (clk_1x),
@@ -115,11 +115,11 @@ module sysmgr (
 	);
 
 	ice40_serdes_sync #(
-		.PHASE      (2),
+		.PHASE      (3),
 		.NEG_EDGE   (0),
 		.GLOBAL_BUF (0),
-		.LOCAL_BUF  (1),
-		.BEL_COL    ("X13"),
+		.LOCAL_BUF  (0),
+		.BEL_COL    ("X5"),
 		.BEL_ROW    ("Y15")
 	) sync_rd_I (
 		.clk_slow (clk_1x),
@@ -134,7 +134,7 @@ module sysmgr (
 	// -----------------
 
 	// Signals
-	wire      rst_usb_i;
+	reg       rst_usb_i;
 	reg [3:0] rst_usb_cnt;
 
 	// 48 MHz source

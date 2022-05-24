@@ -23,7 +23,7 @@ def RAM_ADDR_CS(cs, addr):
 	return (cs << 30) | addr
 
 
-def main(argv0, port='/dev/ttyUSB1', filename=None):
+def main(argv0, port='/dev/ttyUSB0', filename=None):
 	# Connect to board
 	wb = WishboneInterface(port)
 

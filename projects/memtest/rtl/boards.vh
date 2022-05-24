@@ -22,6 +22,15 @@
 	`define PLL_DIVR 4'b0000
 	`define PLL_DIVF 7'b0010111
 	`define PLL_DIVQ 3'b010
+`elsif BOARD_BLACKICE
+    `define HAS_UART
+    `define PLL_CORE
+    `define PLL_CUSTOM
+    `define PLL_FILTER_RANGE 3'b010
+    `define PLL_DIVR 4'b0000
+    `define PLL_DIVF 7'b0011100
+    `define PLL_DIVQ 3'b010
+	`define SYS_FREQ 45e6
 `endif
 
 // Defaults
